@@ -54,19 +54,19 @@ public class Ex01 {
 				System.out.println("3. 10개의 정수를 입력받아 그 수들 중 짝수의 개수가 몇개인지 출력하는 프로그램");
 				System.out.println(" 정수 10개를 공백을 사용해서 입력 하세요>>>");
 
-				int input = 0; // 스캐너로 받아서 저장하는 변수
-				int even = 0; // 짝수만 카운트 하는 변수
+				int input = 0; // 스캐너로 받아서 저장하는 변수, 참조자료형은 초기값이 자동으로 설정되서 그냥 변수 선언만 하면됨.
+				int even = 0; // 짝수만 카운트 하는 변수, 기본자료형은 초기값을 반드시 넣어줘야됨.
 
 				for (int i = 1; i <= 10; i++) {
 
 					input = sc.nextInt();
 
-					if (input == 0) {
-						continue;
+					if (input % 2 == 0) {
+						even++;
 					}
 
-					else if (input % 2 == 0) {
-						even++;
+					else {
+						continue;
 					}
 				}
 				System.out.printf("입력받은 짝수의 개수는 %d개 입니다.\n", even);
@@ -76,29 +76,23 @@ public class Ex01 {
 			else if (a == 4) {
 				System.out.println("4. 입력받은 정수만큼 성적을 입력받아서 총점과 평균을 출력하는 프로그램");
 				System.out.println(" 학생수를 입력하세요.");
-				
+
 				int p = 0;
 				int score = 0;
 				int sum = 0;
-				int avg = 0;
-				
+				double avg = 0;
+
 				p = sc.nextInt();
-				
-				for (int i = 0; i <=p; i++) {
-					
+				System.out.println(" 학생수 만큼 점수를 입력하세요.");
+				for (int i = 1; i <= p; i++) {
+
 					score = sc.nextInt();
-					
-					sum = score + socore;
-					
-					
-					
+
+					sum = sum + score; //sum+=score;
+
 				}
-					
-				
-				
-				
-				
-				
+				avg = sum / p;
+				System.out.printf("입력한 학생수는 %d명이고, 총점은 %d이고, 평균은 %.2f 입니다.\n", p, sum, avg);//avg 선언안하고 (double) sum/p라고 해도됨.
 
 			}
 
