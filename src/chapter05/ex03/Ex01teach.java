@@ -56,7 +56,7 @@ public class Ex01teach {
 				System.out.print("\n\n");
 
 				// Enhanced For 문을 사용해서 출력
-				for (int k : arr1) {
+				for (int k : arr1) {				//세밀한 컨트롤이 안되지만 모든 값을 k에 저장되어서 출력됨.
 					System.out.print(k + " ");
 				}
 				System.out.print("\n\n");
@@ -77,7 +77,7 @@ public class Ex01teach {
 				for (int a = 1;; a++) { // 배열의 각 방에 값을 저장하는 for문
 
 					if (a % 4 == 0)
-						continue;
+						continue;		// 아래 내용을 실행안하고 for문으로 가버린다(바로위로)
 					arr1[i] = a;
 					i++;
 
@@ -106,8 +106,25 @@ public class Ex01teach {
 				System.out.println(" 배열의 방크기를 정수로 입력해주세요.");
 				idx = sc.nextInt();
 				arr1 = new int[idx];
-				int i = 0;
-				for (int a = 3;; a += 3) {
+				int i = 0;		//배열의 방 번호
+				int a; 			//배열의 방에 들어가는 값
+				
+				for ( a = 1 ;true; a++) {
+					if (a%3==0) {					//3의배수 일때 (true)
+						if (a%6!=0) {				//6의배수가 아닐때 (true)
+							arr1[i]=a;
+							i++;
+							
+							
+						}
+						
+					}
+													//저 모든 경우가 아닐때는 따로 지정안해주면 알아서 그냥 계속 증가함. (if문 스쳐 가면서)
+					
+					if (i ==idx) break;
+					
+				}
+				/*for (int a = 3;; a += 3) {
 					if (a % 6 == 0)
 						continue;
 
@@ -117,7 +134,7 @@ public class Ex01teach {
 					if (i == idx)
 						break;
 
-				}
+				}*/
 
 				// 배열의 저장된 내용을 출력 : For
 				for (i = 0; i < arr1.length; i++) {
