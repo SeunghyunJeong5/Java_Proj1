@@ -13,7 +13,7 @@ class Book{
 	
 	//매개 변수가 1개 인풋 : bookName
 	Book(String bookName) {
-		this();						//Book()를 호출			//this()는 생성자 내부에서 다른 생성자를 호출할때 쓰임
+		this();						//Book()를 호출			//this()는 생성자 내부에서 다른 생성자를 호출할때 쓰임(객체를 호출하는..?)
 		this.bookName = bookName;							//this.은 키워드로 필드나 메소드명 앞에 오는것이고
 	}
 	
