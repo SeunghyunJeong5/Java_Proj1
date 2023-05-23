@@ -46,7 +46,7 @@ public class Ex01 {
 			//if ( h1[i] instanceof Student){ 
 			//Student s = (Student) h1[i];				Human (arr[i])타입을 Student 타입으로 다운캐스팅
 			// sum +=s.kor;
-			//위에 두개를 줄여서 sum +=((Student)h1[i].kor; 이라고 해도됨.
+			//위에 두개를 줄여서 sum +=((Student)h1[i]).kor; 이라고 해도됨.
 			//}
 			//}
 			
