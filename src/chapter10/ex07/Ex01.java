@@ -65,14 +65,32 @@ public class Ex01 {
 		bs = bb1.price * bb1.count;
 		ss = ss1.price * ss1.count;
 		
+	
 		
 		System.out.println("사과의 총 가격은 "+as+"원 입니다.");
 		System.out.println("바나나의 총 가격은 "+bs+"원 입니다.");
 		System.out.println("딸기의 총 가격은 "+ss+"원 입니다.");
-				
 		
 		
+		System.out.println("=================sum 하는 것을 배열변수로 선언하는 방법=======================");
 		
+		//배열변수로 선언하는 방법도 있음
+		int [] sum = new int[3];		//sum[0] : 사과에 대한 합계, sum[1] : 바나나에 대한 합계, sum[2] : 딸기에 대한 합계
+			
+		if(obj[0] instanceof Apple) {
+		sum[0] = ((Apple) obj[0]).price * ((Apple) obj[0]).count ;
+		}
+		if(obj[1] instanceof Banana) {
+		sum[1] = ((Banana) obj[1]).price * ((Banana) obj[1]).count ;
+		}
+		if(obj[2] instanceof Strawberry) {
+		sum[2] = ((Strawberry) obj[2]).price * ((Strawberry) obj[2]).count ;
+		}
+		
+		System.out.println("사과의 총 가격은 "+sum[0]+"원 입니다.");
+		System.out.println("바나나의 총 가격은 "+sum[1]+"원 입니다.");
+		System.out.println("딸기의 총 가격은 "+sum[2]+"원 입니다.");
+		System.out.println("모든 과일의 총 가격은 "+(sum[0]+sum[1]+sum[2])+"원 입니다.");
 		
 		//for(int i =0; i<obj.length;i++) {
 		//	if(obj[i] instanceof )
@@ -96,7 +114,7 @@ public class Ex01 {
 		Strawberry s1 = new Strawberry ("딸기", 5000, 30);
 		
 		//모든 객체를 Object 배열에 넣는다.
-		Object[] obj = new Object[] {a1,b1,s1};
+		Object[] obj = new Object[] {a1,b1,s1};				//Object로 업캐스팅이 되어서 들어감.
 		
 		Ex01 e1 = new Ex01();
 		e1.totalPrice(obj);
