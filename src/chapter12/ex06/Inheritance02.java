@@ -23,7 +23,8 @@ interface K extends Animal1, Animal2, Animal3{
 class G implements K{
 
 	@Override
-	public void cry() {
+	public void cry() {			//인터페이스를 상속할때는 public 이상의 급으로 
+								//상속을 받아야한다.(원래 상속받는 놈이 더 넓거나 같아야함.)
 		System.out.println("모든 동물은 웁니다.");
 		
 	}
