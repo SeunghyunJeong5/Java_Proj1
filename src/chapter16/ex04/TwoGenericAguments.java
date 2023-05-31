@@ -11,7 +11,7 @@ class KeyValue <K, V>{
 	
 	private K key;
 	private V value;
-	
+
 	
 	public K getKey() {
 		return key;
@@ -70,10 +70,13 @@ public class TwoGenericAguments {
 		
 		kv4.setKey("키값만 사용");
 		System.out.println(kv4.getKey());
+		System.out.println("===========================");
 		
 		// kv4.setValue(0); 오류남... null값만 넣을수있음.
 		
-		
+		//Void로 지정된 곳에는 null값만 입력되지만 사용하지 않도록 처리할때
+		kv4.setValue(null);
+		System.out.println(kv4.getValue());
 		
 	}
 }

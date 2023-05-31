@@ -33,7 +33,7 @@ public class Array_VS_List {
 		
 		//출력
 		System.out.println(Arrays.toString(arr));
-		
+		 System.out.println("배열의 방의 갯수 : " + arr.length);
 		
 		
 		
@@ -55,14 +55,16 @@ public class Array_VS_List {
 		aList.add("마");
 		aList.add("바");
 		aList.add("사");
-		System.out.println("List의 방의 크기 : " + aList.size());
-		
+
+		System.out.println(aList.toString());  //[가, 나, 다, 라, 마, 바, 사]
+		System.out.println("List 의 방의 크기 : " + aList.size());    //방의 크기를 출력 
 		
 		aList.remove("다");
 		aList.remove("바");
 		
 		System.out.println("List의 방의 크기 : " + aList.size());
 		//동적으로 방의 크기가 늘어나고 줄어든다.
+		System.out.println(aList);
 		
 		
 	}
