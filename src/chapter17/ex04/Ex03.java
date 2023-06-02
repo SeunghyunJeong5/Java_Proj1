@@ -55,12 +55,12 @@ class MemberMethod{
 	Set<Member> memSet;
 	//MemberMethod 객체를 생성시 Set을 활성화 시킴.
 	MemberMethod(){
-		this.memSet = new HashSet();
+		this.memSet = new HashSet();			//생성자를 호출하면 자동으로 set이 생성됨.
 	}
 
 	//메소드를 정의
 	public void addMember(Member member) {	//Member객체를 인풋으로 던지면 memSet에 저장
-		
+											//set에는 항상 객체를 넣는거임. Wrapper는 그냥 그것자체로 객체가 되는거임.
 		//코드 뭐뭐.add뭐 하면되지 않을까..
 		
 		memSet.add(member);
@@ -77,7 +77,7 @@ class MemberMethod{
 		Iterator<Member> iterator = memSet.iterator();
         while (iterator.hasNext()) {
             Member member = iterator.next();
-            if (member.memberID == memberID) {
+            if (member.memberID == memberID) {	//후자의 memberID는 내가 메소드를 호출할때 넣은 int memberID를 의미함. 이거랑 ir.next()를 통해서 읽어온 객체의 memberID랑 비교를 하는것.
                 iterator.remove();
                 return true;
             }

@@ -1,11 +1,11 @@
 package chapter17.ex04;
-
+/
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class Set_TreeSet_Method3 {
+public class Set_TreeSet_Method {
 	
 	public static void main(String[] args) {
 		

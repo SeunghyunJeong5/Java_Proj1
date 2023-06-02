@@ -1,6 +1,7 @@
 package chapter17.ex04;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
@@ -67,9 +68,19 @@ public static void main(String[] args) {
 	System.out.println(hset.size());
 	
 	
+	System.out.println("set에 저장된 값을 출력 : Iterator 사용");
 	
+	Iterator<Student> ir = hset.iterator();
+	while(ir.hasNext()) {
+		Student student = ir.next();		//set안에 들어있는 객체를 읽어옴.
+		System.out.println(ir.next());  //안에 student를 넣는것과같음(이거는 객체를 출력하는건데, toString을 오버라이딩한것을 저위에 해놔서 객체만 읽어와도 나중에것을 전부다 읽어옴.
+		//System.out.println((ir.next()).stuID); // 이거는 객체 안에있는것을 따로 읽어오는 것임.(대신에 ir.next();는 하나만 사용해야됨. 두개 사용하면 오류남)
+	}
 	
-	
+	System.out.println("set에 저장된 앖을 출력 : enhanced for문을 사용");
+	for( Student k : hset) {
+		System.out.println(k.stuID);  //안에 k놓으면 내용 다 읽어옴.
+	}
 	
 	
 }
